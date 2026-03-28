@@ -1,0 +1,59 @@
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raiz do HTML, linguagem do documento configurada para pt-br (português do Brasil) -->
+<html lang="pt-br">
+<head>
+    <!-- Conjunto de caracteres definido para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Responsividade: largura igual à da viewport e escala inicial 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Netflix</title>
+    <!-- Link para arquivo CSS externo com os estilos do site -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Splash Screen Netflix -->
+    <div id="splash" class="splash-screen">
+        <span class="netflix-logo">Netflix</span>
+    </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          document.getElementById('splash').classList.add('hide');
+        }, 2200); // 2,2 segundos
+      });
+    </script>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Título de topo que pergunta quem está assistindo -->
+        <h1>Quem está assistindo?</h1>
+        <!-- Seção que agrupa os perfis de usuários -->
+        <section class="profiles-section">
+            <!-- Cada figura representa um perfil com imagem + legenda -->
+            <figure class="profile">
+                <!-- Imagem do perfil e alt text para acessibilidade -->
+                <img src="assets/perfil1.jpg" alt="Ilustração de um jovem em yukata azul com estampa de bambu e colar de contas, em um jardim japonês tradicional.">
+                <!-- Nome do perfil exibido como legenda -->
+                <figcaption>Uander</figcaption>
+            </figure>
+            <figure class="profile">
+                <img src="assets/perfil2.jpg" alt="Ilustração de uma jovem de cabelos longos e soltos em quimono rosa floral e colar de corrente de prata, sorrindo em um jardim.">
+                <figcaption>Gilvaneide</figcaption>
+            </figure>
+            <figure class="profile">
+                <img src="assets/Perfil3.png" alt="Ilustração de um homem grisalho de 60 anos, com barba e suéter, sorrindo e segurando um tablet em uma sala de estar moderna com uma TV ao fundo.">
+                <figcaption>David</figcaption>
+            </figure>
+            <figure class="profile">
+                <img src="assets/Perfil4.png" alt="Ilustração de uma mulher negra de 50 anos, com cabelos crespos grisalhos e vestido colorido, sorrindo em um jardim florido com uma fonte ao fundo.">
+                <figcaption>Jaqueline</figcaption>
+            </figure>
+            <figure class="profile">
+                <img src="assets/Perfil5.png" alt="Ilustração de um menino de 10 anos, com cabelo castanho curto e liso e camiseta listrada, sorrindo em pé em um campo gramado.">
+                <figcaption>Rafael</figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>

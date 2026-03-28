@@ -1,0 +1,382 @@
+/* Estilos inspirados na Netflix */
+
+/* Reset básico para evitar espaçamentos e bordas inesperadas */
+* {
+    margin: 0;
+    /* remove margem padrão */
+    padding: 0;
+    /* remove padding padrão */
+    box-sizing: border-box;
+    /* inclui bordas no tamanho total */
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* fonte limpa e sem serifa */
+    background-image: url('/assets/fundo.jpg');
+    /* imagem de fundo inspirada na Netflix */
+    background-size: cover;
+    /* cobre toda a área do body */
+    background-position: center;
+    /* centraliza a imagem */
+    background-attachment: scroll;
+    /* comportamento padrão, otimizado para mobile */
+    color: #ffffff;
+    /* texto branco para contraste */
+    min-height: 100vh;
+    /* altura mínima 100% da viewport */
+    display: flex;
+    /* usa flexbox no body para centralizar */
+    justify-content: center;
+    /* centro horizontal */
+    align-items: center;
+    /* centro vertical */
+}
+
+main {
+    text-align: center;
+    /* centraliza texto dentro de main */
+    width: 100%;
+    /* ocupa a largura disponível */
+    max-width: 800px;
+    /* limita largura para legibilidade */
+    padding: 20px;
+    /* espaçamento interno ao redor */
+}
+
+h1 {
+    font-size: 3rem;
+    /* tamanho grande para destaque */
+    margin-bottom: 2rem;
+    /* distância inferior do título */
+    color: #e50914;
+    /* vermelho Netflix */
+    font-weight: 700;
+    /* negrito para peso visual */
+}
+
+.profiles-section {
+    display: flex;
+    /* layout em linha flexível */
+    justify-content: center;
+    /* alinha perfis no centro */
+    gap: 2rem;
+    /* espaço entre os perfis */
+    flex-wrap: wrap;
+    /* permite quebra em telas menores */
+    width: 100%;
+    /* ocupa largura disponível */
+    max-width: 900px;
+    /* limita largura para 5 perfis lado a lado em desktop */
+}
+
+.profile {
+    text-align: center;
+    /* centraliza conteúdos do perfil */
+    cursor: pointer;
+    /* cursor de clique como na interface */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* animações suaves */
+    flex-basis: auto;
+    /* tamanho automático baseado no conteúdo */
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    /* leve zoom no hover */
+}
+
+.profile img {
+    border-radius: 50%;
+    /* deixa todas as imagens perfeitamente redondas */
+    border: none;
+    /* borda vermelha fina e igual para todos */
+    background: none;
+    /* remove fundo branco */
+    object-fit: cover;
+    /* cobre o container recortando parte se necessário */
+    box-shadow: none;
+    /* remove qualquer sombra padrão */
+    display: block;
+    /* remove espaço em branco embaixo */
+    max-width: 100%;
+    /* nunca ultrapassa 100% */
+}
+
+.profile:hover img {
+    box-shadow: 0 0 12px 2px #0005;
+    /* brilho vermelho ao passar o mouse */
+}
+
+.profile figcaption {
+    margin-top: 1rem;
+    /* margem entre imagem e legenda */
+    font-size: 1.2rem;
+    /* tamanho de fonte do nome do perfil */
+    font-weight: 500;
+    /* peso intermediário */
+    color: #f41111;
+    /* garante cor branca */
+    word-break: break-word;
+    /* quebra palavras longas */
+}
+
+/* Responsividade */
+
+/* Mobile pequeno (320px a 480px) */
+@media (max-width: 480px) {
+    body {
+        height: 100vh;
+        /* garante altura total */
+        padding: 10px;
+        /* pequeno padding nas laterais */
+    }
+
+    main {
+        max-width: 100%;
+        /* ocupa toda largura disponível */
+        padding: 15px;
+        /* reduz padding interno */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        /* título menor em mobile */
+        margin-bottom: 1.5rem;
+        /* reduz margem */
+        margin-top: 1rem;
+        /* adiciona espaço no topo */
+    }
+
+    .profiles-section {
+        flex-direction: column;
+        /* empilha perfis verticalmente */
+        gap: 1.5rem;
+        /* espaço entre perfis */
+        align-items: center;
+        /* centraliza cada perfil */
+    }
+
+    .profile img {
+        width: 100px;
+        /* imagem menor para mobile */
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 0.9rem;
+        /* texto menor do nome */
+        margin-top: 0.8rem;
+        /* reduz espaço */
+    }
+}
+
+/* Mobile (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    main {
+        max-width: 100%;
+        /* aproveita espaço disponível */
+        padding: 20px;
+        /* padding moderado */
+    }
+
+    h1 {
+        font-size: 2rem;
+        /* título médio */
+        margin-bottom: 2rem;
+    }
+
+    .profiles-section {
+        gap: 1.5rem;
+        /* espaço entre perfis */
+        justify-content: center;
+    }
+
+    .profile img {
+        width: 100px;
+        /* imagem média */
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 1rem;
+        /* nome legível */
+        margin-top: 1rem;
+    }
+}
+
+/* Tablet (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        max-width: 100%;
+        /* ocupar espaço da tela */
+        padding: 30px;
+        /* padding confortável */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        /* título maior */
+        margin-bottom: 2.5rem;
+    }
+
+    .profiles-section {
+        gap: 2.5rem;
+        /* espaço generoso entre perfis */
+        flex-wrap: wrap;
+        max-width: 100%;
+        /* limita largura do container */
+        margin: 0 auto;
+        /* centraliza no container */
+    }
+
+    .profile img {
+        width: 100px;
+        /* imagem maior */
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+    }
+}
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+    body {
+        background-attachment: fixed;
+        /* parallax effect */
+    }
+
+    main {
+        max-width: 900px;
+        /* largura confortável */
+        padding: 40px;
+        /* padding amplo */
+    }
+
+    h1 {
+        font-size: 3rem;
+        /* título original ou maior */
+        margin-bottom: 3rem;
+    }
+
+    .profiles-section {
+        gap: 3rem;
+        /* espaço amplo entre perfis */
+    }
+
+    .profile img {
+        width: 100px;
+        /* imagem maior */
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 1.3rem;
+        /* nome maior */
+        margin-top: 1.5rem;
+    }
+
+    .profile:hover {
+        transform: scale(1.15);
+        /* zoom mais pronunciado */
+    }
+}
+
+/* Orientação landscape (paisagem) para devices pequenos */
+@media (max-height: 500px) {
+    body {
+        height: auto;
+        /* altura automática */
+        padding: 10px 0;
+        /* padding vertical */
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        /* reduz margem em landscape */
+    }
+
+    .profiles-section {
+        gap: 1rem;
+        /* espaço reduzido */
+        flex-direction: row;
+        /* força layout horizontal */
+        flex-wrap: wrap;
+    }
+
+    .profile img {
+        width: 80px;
+        /* imagem pequena */
+        height: 80px;
+    }
+
+    .profile figcaption {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* HD e superior (1440px+) */
+@media (min-width: 1440px) {
+    main {
+        max-width: 1000px;
+        /* espaço maior */
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        /* título ainda maior */
+    }
+
+    .profile img {
+        width: 180px;
+        /* imagem maior */
+        height: 180px;
+    }
+
+    .profile figcaption {
+        font-size: 1.4rem;
+        /* nome maior */
+    }
+}
+
+/* Splash Screen Netflix */
+.splash-screen {
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+    opacity: 1;
+    pointer-events: all;
+}
+.splash-screen.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+}
+.netflix-logo {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 4.5rem;
+    color: #e50914;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 40px #e50914, 0 0 80px #000;
+    animation: netflix-logo-zoom 1.5s cubic-bezier(.4,0,.2,1) 0.2s both;
+    opacity: 0;
+}
+@keyframes netflix-logo-zoom {
+    0% { opacity: 0; transform: scale(0.7); filter: blur(8px); }
+    60% { opacity: 1; transform: scale(1.1); filter: blur(0); }
+    100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+@media (max-width: 600px) {
+    .netflix-logo { font-size: 2.2rem; }
+}
