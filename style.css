@@ -30,6 +30,12 @@ body[data-theme="light"] {
     --theme-control-text: #141414;
 }
 
+body[data-theme="black"] {
+    --overlay-color: transparent;
+    background-image: none;
+    background-color: #000000;
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /* fonte limpa e sem serifa */
@@ -157,6 +163,12 @@ h1 {
     /* animações suaves */
     flex-basis: auto;
     /* tamanho automático baseado no conteúdo */
+}
+
+.profile-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .profile:hover {
@@ -414,8 +426,19 @@ h1 {
 /* HD e superior (1440px+) */
 @media (min-width: 1440px) {
     main {
-        max-width: 1000px;
+        max-width: 1280px;
         /* espaço maior */
+    }
+
+    .profiles-section {
+        max-width: 1200px;
+        /* mais espaço para perfis */
+    }
+
+    .profiles-list {
+        max-width: 1200px;
+        gap: 2rem;
+        /* espaço generoso entre perfis */
     }
 
     h1 {

@@ -21,7 +21,7 @@
     <div class="theme-picker">
         <label for="theme-select">Tema:</label>
         <select id="theme-select" aria-label="Selecionar tema da tela">
-            <option value="dark">Escuro</option>
+            <option value="black">Tela preta</option>
             <option value="light">Claro</option>
         </select>
     </div>
@@ -32,8 +32,9 @@
         <!-- Seção que agrupa os perfis de usuários -->
         <section class="profiles-section">
             <!-- Lista ordenada de perfis para melhorar a semântica -->
-            <ol class="profiles-list">
-                <li>
+            <ul class="profiles-list">
+                <li class="item-perfil">
+                    <a href="catalogo/catalogo.html" class="profile-link" aria-label="Entrar no perfil de Uander">
                     <!-- Cada figura representa um perfil com imagem + legenda -->
                     <figure class="profile">
                         <!-- Imagem do perfil e alt text para acessibilidade -->
@@ -41,32 +42,41 @@
                         <!-- Nome do perfil exibido como legenda -->
                         <figcaption>Uander</figcaption>
                     </figure>
+                    </a>
                 </li>
                 <li>
-                    <figure class="profile">
-                        <img src="assets/perfil2.jpg" alt="Ilustração de uma jovem de cabelos longos e soltos em quimono rosa floral e colar de corrente de prata, sorrindo em um jardim.">
-                        <figcaption>Gilvaneide</figcaption>
-                    </figure>
+                    <a href="catalogo/catalogo.html" class="profile-link" aria-label="Entrar no perfil de Gilvaneide">
+                        <figure class="profile">
+                            <img src="assets/perfil2.jpg" alt="Ilustração de uma jovem de cabelos longos e soltos em quimono rosa floral e colar de corrente de prata, sorrindo em um jardim.">
+                            <figcaption>Gilvaneide</figcaption>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <figure class="profile">
-                        <img src="assets/Perfil3.png" alt="Ilustração de um homem grisalho de 60 anos, com barba e suéter, sorrindo e segurando um tablet em uma sala de estar moderna com uma TV ao fundo.">
-                        <figcaption>David</figcaption>
-                    </figure>
+                    <a href="catalogo/catalogo.html" class="profile-link" aria-label="Entrar no perfil de David">
+                        <figure class="profile">
+                            <img src="assets/Perfil3.png" alt="Ilustração de um homem grisalho de 60 anos, com barba e suéter, sorrindo e segurando um tablet em uma sala de estar moderna com uma TV ao fundo.">
+                            <figcaption>David</figcaption>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <figure class="profile">
-                        <img src="assets/Perfil4.png" alt="Ilustração de uma mulher negra de 50 anos, com cabelos crespos grisalhos e vestido colorido, sorrindo em um jardim florido com uma fonte ao fundo.">
-                        <figcaption>Jaqueline</figcaption>
-                    </figure>
+                    <a href="catalogo/catalogo.html" class="profile-link" aria-label="Entrar no perfil de Jaqueline">
+                        <figure class="profile">
+                            <img src="assets/Perfil4.png" alt="Ilustração de uma mulher negra de 50 anos, com cabelos crespos grisalhos e vestido colorido, sorrindo em um jardim florido com uma fonte ao fundo.">
+                            <figcaption>Jaqueline</figcaption>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <figure class="profile">
-                        <img src="assets/Perfil5.png" alt="Ilustração de um menino de 10 anos, com cabelo castanho curto e liso e camiseta listrada, sorrindo em pé em um campo gramado.">
-                        <figcaption>Rafael</figcaption>
-                    </figure>
+                    <a href="catalogo/catalogo.html" class="profile-link" aria-label="Entrar no perfil de Rafael">
+                        <figure class="profile">
+                            <img src="assets/Perfil5.png" alt="Ilustração de um menino de 10 anos, com cabelo castanho curto e liso e camiseta listrada, sorrindo em pé em um campo gramado.">
+                            <figcaption>Rafael</figcaption>
+                        </figure>
+                    </a>
                 </li>
-            </ol>
+            </ul>
         </section>
     </main>
     <script src="script.js"></script>
