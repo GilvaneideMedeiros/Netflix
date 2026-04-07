@@ -69,8 +69,8 @@ function buildProfileCatalog(profileTitles) {
 }
 
 export const categoriesByProfile = {
-    Uander: categories,
-    Gilvaneide: buildProfileCatalog(['Romance e emoção', 'Séries em alta', 'Para relaxar']),
+    Miguel: categories,
+    Jane: buildProfileCatalog(['Romance e emoção', 'Séries em alta', 'Para relaxar']),
     David: buildProfileCatalog(['Clássicos e drama', 'Séries para rever', 'Sessão da noite']),
     Jaqueline: buildProfileCatalog(['Inspiradores', 'Séries para curtir', 'Para maratonar no fim de semana']),
     Rafael: buildProfileCatalog(['Aventura total', 'Séries favoritas', 'Para assistir depois'])

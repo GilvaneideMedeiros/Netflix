@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const nomePerfil = localStorage.getItem('perfilAtivoNome') || 'Uander';
+    const aliasesPerfil = {
+        Uander: 'Miguel',
+        Gilvaneide: 'Jane'
+    };
+    const nomePerfilSalvo = localStorage.getItem('perfilAtivoNome') || 'Miguel';
+    const nomePerfil = aliasesPerfil[nomePerfilSalvo] || nomePerfilSalvo;
     const nomePerfilNormalizado = nomePerfil.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const imagemPerfil = localStorage.getItem('perfilAtivoImagem');
     const themeSelect = document.getElementById('catalog-theme-select');
@@ -60,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const container = document.getElementById('main-content');
-    const categories = categoriesByProfile[nomePerfil] || categoriesByProfile.Uander;
+    const categories = categoriesByProfile[nomePerfil] || categoriesByProfile.Miguel;
     
     if (container) {
         categories.forEach(category => {
