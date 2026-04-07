@@ -147,7 +147,7 @@ h1 {
 }
 
 h1::after {
-    content: "Perfis com clima proprio para entrar na sua sala principal.";
+    content: "Perfis com clima próprio para entrar na sua sala principal.";
     display: block;
     margin-top: 1rem;
     color: var(--text-color);

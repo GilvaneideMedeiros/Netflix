@@ -8,7 +8,7 @@ export function createCard(item) {
     }
 
     const img = document.createElement('img');
-    img.alt = `Capa do titulo`;
+    img.alt = `Capa do título`;
 
     const videoId = getYouTubeId(item.youtube);
     const hasVideo = Boolean(videoId);

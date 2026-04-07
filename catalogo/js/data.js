@@ -41,7 +41,7 @@ export const categories = [
         items: [
             { img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Nova temporada", badgeColor: "red" },
             { img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=900&auto=format&fit=crop", top10: true },
-            { img: "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=900&auto=format&fit=crop", badge: "Novo episodio", badgeColor: "red" },
+            { img: "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=900&auto=format&fit=crop", badge: "Novo episódio", badgeColor: "red" },
             { img: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=900&auto=format&fit=crop", badge: "Novidade", badgeColor: "red" },
         ]
     },
@@ -50,8 +50,8 @@ export const categories = [
         items: [
             { img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=900&auto=format&fit=crop", top10: true },
             { img: "https://images.unsplash.com/photo-1516382799247-87df95d790b7?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Novidade", badgeColor: "red" },
-            { img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Novo episodio", badgeColor: "red" },
-            { img: "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Selecao", badgeColor: "red" },
+            { img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Novo episódio", badgeColor: "red" },
+            { img: "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=900&auto=format&fit=crop", top10: true, badge: "Seleção", badgeColor: "red" },
         ]
     }
 ];
@@ -70,8 +70,8 @@ function buildProfileCatalog(profileTitles) {
 
 export const categoriesByProfile = {
     Uander: categories,
-    Gilvaneide: buildProfileCatalog(['Romance e emocao', 'Series em alta', 'Para relaxar']),
-    David: buildProfileCatalog(['Classicos e drama', 'Series para rever', 'Sessao da noite']),
-    Jaqueline: buildProfileCatalog(['Inspiradores', 'Series para curtir', 'Para maratonar no fim de semana']),
-    Rafael: buildProfileCatalog(['Aventura total', 'Series favoritas', 'Para assistir depois'])
+    Gilvaneide: buildProfileCatalog(['Romance e emoção', 'Séries em alta', 'Para relaxar']),
+    David: buildProfileCatalog(['Clássicos e drama', 'Séries para rever', 'Sessão da noite']),
+    Jaqueline: buildProfileCatalog(['Inspiradores', 'Séries para curtir', 'Para maratonar no fim de semana']),
+    Rafael: buildProfileCatalog(['Aventura total', 'Séries favoritas', 'Para assistir depois'])
 };

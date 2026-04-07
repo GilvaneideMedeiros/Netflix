@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeSelect) {
         themeSelect.value = savedThemePreference;
-        themeSelect.setAttribute('aria-label', `Selecionar tema do catalogo do perfil ${nomePerfil}`);
+        themeSelect.setAttribute('aria-label', `Selecionar tema do catálogo do perfil ${nomePerfil}`);
         themeSelect.addEventListener('change', (event) => {
             const selectedTheme = event.target.value;
             localStorage.setItem(themeStorageKey, selectedTheme);
